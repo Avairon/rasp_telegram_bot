@@ -1,0 +1,18 @@
+main.py: 'int' object is not subscriptable
+main.py: 'int' object is not subscriptable
+main.py: 'int' object is not subscriptable
+main.py: 'int' object is not subscriptable
+main.py: list index out of range
+main.py: list index out of range
+main.py: list index out of range
+main.py: list index out of range
+main.py: list index out of range
+main.py: list index out of range
+main.py: object of type 'datetime.timedelta' has no len()
+main.py: list index out of range
+main.py: list index out of range
+main.py: '<' not supported between instances of 'datetime.timedelta' and 'int'
+main.py: 'datetime.timedelta' object is not subscriptable
+main.py: int() argument must be a string, a bytes-like object or a real number, not 'datetime.timedelta'
+main.py: int() argument must be a string, a bytes-like object or a real number, not 'datetime.timedelta'
+main.py: list index out of range
