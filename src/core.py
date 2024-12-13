@@ -1,5 +1,7 @@
 import datetime
 import src.tranzactions as tr
+import psycopg2
+
 
 import sys
 sys.path.insert(1, '../')
@@ -25,7 +27,9 @@ def par_output(id):
         if user_info == -1:
             ###
             return str(messages[0])
-            
+        
+
+
         group = user_info["group"]
         pgroup = user_info["pgroup"]
         dist_skip = user_info["dist_skip"]
@@ -78,7 +82,11 @@ def par_output(id):
                 days_ago = days_ago + 1
                 today += datetime.timedelta(days=1)
                 today = today.replace(hour=0, minute=0)
+        
+        
 
         return str(messages[1]) # if no para in nearest 5 days
     except Exception as e:
+        conn.close()
         tr.log_write('logs/errors.log', ("core.py/para_output: " + str(e)))
+        

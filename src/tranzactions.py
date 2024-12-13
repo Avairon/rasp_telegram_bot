@@ -56,12 +56,26 @@ def json_read(json_name):
 
 def read_users(chat_id):
     try:
+        # conn = psycopg2.connect(
+        #     dbname = "tgbot_users",
+        #     user = "Avairon",
+        #     password = "32165",
+        #     host = "localhost"
+        # )
+        # db_cursor = conn.cursor()
+# 
+        # # UserDB pars
+# 
+        # conn.close()
+
         with open('data/users.json', 'r') as file: # read the json
             data = json.load(file)
-        for i in range(len(data)):
+ 
+        for i in range(len(data)): # Search user
             #print(data[i])
             if data[i]['chat_id'] == chat_id:
                 return data[i]
+
         return -1
     except Exception as e:
         log_write("logs/errors.log", str(e))
